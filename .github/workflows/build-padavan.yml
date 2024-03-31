@@ -37,7 +37,7 @@ jobs:
         if [ $KERNEL = "3.4" ] ; then
         git clone --depth=1 https://github.com/yunyuhao123aoiz/padavan-4.4.git /opt/rt-n56u
         else
-        git clone --depth=1 https://github.com/yunyuhao123aoiz/Padavan-3.4-KVR.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/xiaowansm5/Padavan-KVR.git /opt/rt-n56u
         fi
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
@@ -86,7 +86,7 @@ jobs:
         else
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT
-        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config #DNSFORWARDER
+        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=y" >> .config #DNSFORWARDER
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #内网穿透FRPS
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
